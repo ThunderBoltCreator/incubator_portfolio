@@ -1,19 +1,21 @@
-import './App.css';
-import styled from 'styled-components';
+import Content from './layout/content/Content'
+import Header from './layout/header/Header'
+import About from './layout/sections/about/About'
+import Skills from './layout/sections/skills/Skills'
+import Works from './layout/sections/works/Works'
 
 
 function App() {
-    return (
-        <div className="App">
-            <Title>Welcome to IT-INCUBATOR</Title>
-        </div>
-    );
+   return (
+      <div style={{position: 'relative'}}>
+         <Header/>
+         <Content>
+            <About/>
+            <Skills/>
+            <Works/>
+         </Content>
+      </div>
+   )
 }
 
-export default App;
-
-const Title = styled.h1`
-    font-size: 1.5em;
-    text-align: center;
-    color: #e91e63;
-`;
+export default App
