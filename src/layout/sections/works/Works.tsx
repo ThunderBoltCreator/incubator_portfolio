@@ -1,7 +1,7 @@
 import {FC} from 'react'
 import styled from 'styled-components'
 import {FlexContainerStyled} from '../../../styledComponents/FlexContainer.styled'
-import WorkItem from "../../../components/workItem/WorkItem";
+import WorkItem from '../../../components/workItem/WorkItem'
 
 import proj1 from '../../../assets/images/proj-1.webp'
 import proj2 from '../../../assets/images/proj-2.webp'
@@ -38,7 +38,7 @@ const Works: FC<IWorks> = (props) => {
       {
          image: proj6,
          description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, illo!'
-      },
+      }
    ]
 
    const renderProjects = () => (
@@ -47,7 +47,7 @@ const Works: FC<IWorks> = (props) => {
       ))
    )
    return (
-      <StyledWork wrap={'wrap'} as={'section'}>
+      <StyledWork wrap={'wrap'} gap={'20px'} justifyContent={'space-between'} as={'section'}>
          {renderProjects()}
       </StyledWork>
    )
@@ -55,6 +55,4 @@ const Works: FC<IWorks> = (props) => {
 
 export default Works
 
-const StyledWork = styled(FlexContainerStyled)`
-  margin: -20px;
-`
+const StyledWork = styled(FlexContainerStyled)``

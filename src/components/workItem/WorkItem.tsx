@@ -1,5 +1,5 @@
-import React, {FC} from 'react';
-import styled from "styled-components";
+import React, {FC} from 'react'
+import styled from 'styled-components'
 
 interface IWorkItem {
    image: string
@@ -8,44 +8,45 @@ interface IWorkItem {
 
 const WorkItem: FC<IWorkItem> = ({description, image}) => {
    return (
-      <WorkItemStyled >
+      <WorkItemStyled>
          <div className={'image-container'}>
-            <img src={image} alt="ProjImage"/>
+            <div className={'image'} style={{backgroundImage: `url(${image})`}}/>
          </div>
+
          <div className={'body'}>
             {description}
          </div>
       </WorkItemStyled>
-   );
+   )
 }
 
-export default WorkItem;
+export default WorkItem
 
 const WorkItemStyled = styled.div`
-  flex: 0 0 33.333%;
-  padding: 20px;
+  max-width: 342px;
   text-align: left;
-  
+  gap: 10px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
-  
+
   .image-container {
-    flex: 0 0 330px;
-    height: 330px;
     width: 100%;
-    
-    margin-bottom: 10px;
+
+    aspect-ratio: 1/1;
+
+    .image {
+
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
   }
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
+
   .body {
-    height: 100%;
     flex: 1 1 auto;
-    
+
     font-size: 20px;
   }
 `
