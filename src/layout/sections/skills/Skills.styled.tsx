@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 
-export const SkillsStyled = styled.div`
-  padding: 80px 0 0;
-  margin-bottom: 200px;
+export const SkillsStyled = styled.section`
+  padding: 100px 0;
 
   h3 {
     text-align: right;

@@ -9,6 +9,7 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
 
+  ul,
   ul li {
     list-style: none;
   }
@@ -19,20 +20,19 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
+  svg {
+    font-size: inherit;
+  }
+
   a,
   button {
     cursor: pointer;
   }
 
   body {
-    font-family: 'Nunito', sans-serif;
-    background-color: #041F31;
+    font-family: 'Fira Code', monospace;
+    background-color: ${({theme}) => theme.color.background};
     color: ${({theme}) => theme.color.primary};
-  }
-
-  card {
-    max-width: 500px;
-    min-width: 200px;
-    width: 100%;
+    font-size: 16px;
   }
 `

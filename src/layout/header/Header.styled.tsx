@@ -1,16 +1,10 @@
 import styled from 'styled-components'
 import {appTheme} from '../../assets/styles/appTheme'
+import {AppContainerStyled} from '../../styledComponents/AppContainer.styled'
+import {FlexContainerStyled} from '../../styledComponents/FlexContainer.styled'
 
-export const HeaderStyled = styled.header`
-  height: 80px;
+export const HeaderStyled = styled(FlexContainerStyled)`
   width: 100%;
-  position: absolute;
-  top: 0;
   padding: 10px 0;
   font-size: 24px;
-  background-color: ${appTheme.color.reverse};
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 `

@@ -1,20 +1,22 @@
-import Content from './layout/content/Content'
-import Header from './layout/header/Header'
-import About from './layout/sections/about/About'
+import {Header} from './layout/header/Header'
+import FirstSection from './layout/sections/firstSection/FirstSection'
+import {Contact} from './layout/sections/contact/Contact'
 import Skills from './layout/sections/skills/Skills'
 import Works from './layout/sections/works/Works'
+import {AppContainerStyled} from './styledComponents/AppContainer.styled'
 
 
 function App() {
    return (
-      <div style={{position: 'relative'}}>
+      <AppContainerStyled>
          <Header/>
-         <Content>
-            <About/>
+         <main>
+            <FirstSection/>
             <Skills/>
             <Works/>
-         </Content>
-      </div>
+            <Contact/>
+         </main>
+      </AppContainerStyled>
    )
 }
 

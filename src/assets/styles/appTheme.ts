@@ -1,7 +1,12 @@
 export const appTheme = {
    color: {
-      primary: '#BDEBEA',
-      reverse: '#9041ec'
+      primary: '#ABB2BF',
+      secondary: '#FFF',
+      decoration: '#C778DD',
+      background: '#282C33'
+   },
+   sizes: {
+      headerHeight: '80px'
    }
 }
 

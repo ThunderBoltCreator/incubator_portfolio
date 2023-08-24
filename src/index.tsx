@@ -5,7 +5,6 @@ import App from './App'
 import {appTheme} from './assets/styles/appTheme'
 import {GlobalStyles} from './assets/styles/GlobalStyles'
 import reportWebVitals from './reportWebVitals'
-import './index.css'
 
 const root = ReactDOM.createRoot(
    document.getElementById('root') as HTMLElement

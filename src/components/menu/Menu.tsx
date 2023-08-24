@@ -1,43 +1,32 @@
 import {FC} from 'react'
 import styled from 'styled-components'
+import {FlexContainerStyled} from '../../styledComponents/FlexContainer.styled'
 
 interface IMenu {
 }
 
 const Menu: FC<IMenu> = (props) => {
-   const menuItems = ['About', 'Skills', 'Latest work', 'Contact']
+   const menuItems = ['#home', '#works', '#firstSection-me', '#contacts']
 
    const renderItems = () => (
       menuItems.map((item) => (
          <li key={item}>
-            <a href={`#${item.toLowerCase()}`}>{item}</a>
+            <a href={`${item.toLowerCase()}`}>{item}</a>
          </li>
       ))
    )
 
    return (
-      <MenuStyled>
-         <ul>
-            {
-               renderItems()
-            }
-         </ul>
+      <MenuStyled alignItems={'center'} justifyContent={'flex-end'} gap={'10px 32px'} as={'ul'}>
+         {
+            renderItems()
+         }
       </MenuStyled>
    )
 }
 
 export default Menu
 
-const MenuStyled = styled.div`
+const MenuStyled = styled(FlexContainerStyled)`
   flex: 1;
-
-  ul {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    li + li {
-      margin-left: 20px;
-    }
-  }
 `

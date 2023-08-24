@@ -32,11 +32,9 @@ const WorkItemStyled = styled.div`
 
   .image-container {
     width: 100%;
-
     aspect-ratio: 1/1;
 
     .image {
-
       width: 100%;
       height: 100%;
       background-size: cover;

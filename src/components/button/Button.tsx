@@ -5,50 +5,41 @@ import styled from 'styled-components'
 
 interface IButton {
    children: ReactNode
-   outlined?: boolean
+   pink?: boolean
 }
 
-const Button: FC<IButton> = ({children, outlined}) => {
+const Button: FC<IButton> = ({children, pink}) => {
 
    return (
-      <>
-         {
-            outlined ? (
-               <ButtonStyled
-                  border
-                  color={'#FB3F5C'}
-               >
-                  {children}
-               </ButtonStyled>
-            ) : (
-               <ButtonStyled>
-                  {children}
-               </ButtonStyled>
-            )
-         }
-      </>
+      <ButtonStyled pink={pink}>{children}</ButtonStyled>
    )
 }
 
 interface IButtonStyled {
-   border?: boolean
-   color?: string
+   pink?: boolean
 }
 
 const ButtonStyled = styled.button<IButtonStyled>`
-  padding: 20px 60px;
-  font-size: 20px;
-  border-radius: 18px;
-  color: #FFF;
-  border: none;
-  background-color: #FB3F5C;
+  padding: 8px 16px;
+  font-weight: 500;
+  transition: background-color .3s ease-in-out;
+  background-color: transparent;
 
+  border: 1px solid ${props => props.theme.color.primary};
+  color: ${props => props.theme.color.primary};
 
-  ${props => props.border && css<IButtonStyled>`
-    background-color: transparent;
-    border: 1px solid ${props => props.color};
-    color: ${props => props.color}
+  &:hover {
+    background-color: rgba(171, 178, 191, 0.20);
+  }
+
+  ${props => props.pink && css`
+    border: 1px solid ${props => props.theme.color.decoration};
+    color: ${props => props.theme.color.secondary};
+
+    &:hover {
+      background-color: rgba(199, 120, 221, 0.20);
+    }
   `}
-`
 
+`
 export default Button

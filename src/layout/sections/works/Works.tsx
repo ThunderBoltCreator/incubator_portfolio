@@ -1,5 +1,6 @@
 import {FC} from 'react'
 import styled from 'styled-components'
+import SectionTitle from '../../../components/sectionTitle/SectionTitle'
 import {FlexContainerStyled} from '../../../styledComponents/FlexContainer.styled'
 import WorkItem from '../../../components/workItem/WorkItem'
 
@@ -47,9 +48,13 @@ const Works: FC<IWorks> = (props) => {
       ))
    )
    return (
-      <StyledWork wrap={'wrap'} gap={'20px'} justifyContent={'space-between'} as={'section'}>
-         {renderProjects()}
-      </StyledWork>
+      <section>
+         <SectionTitle padding={'0 0 0 65px'} textAlign={'center'} margin={'0 0 30px 0'} tag={'h2'}>Last
+            work</SectionTitle>
+         <StyledWork wrap={'wrap'} gap={'50px'} justifyContent={'center'} as={'section'}>
+            {renderProjects()}
+         </StyledWork>
+      </section>
    )
 }
 

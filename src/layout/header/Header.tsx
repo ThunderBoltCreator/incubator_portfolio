@@ -1,19 +1,17 @@
 import {FC} from 'react'
+import {HeaderActions} from '../../components/headerActions/HeaderActions'
 import Logo from '../../components/logo/Logo'
-import Menu from '../../components/menu/Menu'
 import {HeaderStyled} from './Header.styled'
 
 interface IHeader {
 }
 
-const Header: FC<IHeader> = (props) => {
+export const Header: FC<IHeader> = (props) => {
    return (
-      <HeaderStyled>
+      <HeaderStyled alignItems="center" justifyContent="space-between" as="header">
          <Logo/>
-         <Menu/>
+         <HeaderActions/>
       </HeaderStyled>
    )
 }
-
-export default Header
 
