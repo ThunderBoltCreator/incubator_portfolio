@@ -19,9 +19,6 @@ const WorkItem: FC<IWorkItem> = ({description, image}) => {
       </WorkItemStyled>
    )
 }
-
-export default WorkItem
-
 const WorkItemStyled = styled.div`
   max-width: 342px;
   text-align: left;
@@ -29,7 +26,7 @@ const WorkItemStyled = styled.div`
   height: fit-content;
   display: flex;
   flex-direction: column;
-
+  
   .image-container {
     width: 100%;
     aspect-ratio: 1/1;
@@ -48,3 +45,5 @@ const WorkItemStyled = styled.div`
     font-size: 20px;
   }
 `
+
+export default WorkItem
