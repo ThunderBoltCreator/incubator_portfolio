@@ -1,38 +1,71 @@
 import {FC} from 'react'
-import photo from '../../../assets/images/myPhoto.webp'
+import styled from 'styled-components'
 import Button from '../../../components/button/Button'
 import SvgIcon from '../../../components/svgIcon/SvgIcon'
-import {FirstSectionStyled} from './FirstSection.styled'
-import svg from '../../../assets/images/logoOutlined.svg'
+import {AppContainer} from '../../../styledComponents/AppContainer.styled'
+import {ImageBoxStyled} from '../../../styledComponents/ImageBox.styled'
+import {Paragraph} from '../../../styledComponents/Paragraph.styled'
+import {TextBlockContainer} from '../../../styledComponents/TextBlockContainer.styled'
+import {Title} from '../../../styledComponents/Title.styled'
+import {FirstSectionStyled, DecorStyled, LinkStyled} from './FirstSection.styled'
+
+
+import photo from '../../../assets/images/myPhoto.webp'
 
 interface IAbout {
 }
 
 const FirstSection: FC<IAbout> = (props) => {
+   console.log(photo)
+
    return (
-      <FirstSectionStyled as={'section'} gap={'30px'} alignItems={'center'}>
-         <div className={'textBlock'}>
-            <h1>
-               Elias is a <span>front-end developer</span>
-            </h1>
-            <p>
-               He crafts responsive websites where technologies meet creativity
-            </p>
-            <Button>Contact me!!</Button>
-         </div>
-         <div className="imageBox">
-            <div className={'decor'}>
-               <SvgIcon iconId={'logo_outlined'} width={155} height={155}/>
-            </div>
-            <img src={photo} alt="Avatar"/>
-            <div className={'link'}>
-               <div></div>
-               Currently working on
-               <a href="#works"> Portfolio</a>
-            </div>
-         </div>
-      </FirstSectionStyled>
+      <section>
+         <AppContainer>
+
+
+            <FirstSectionStyled gap={'30px'} justifyContent={'space-between'} alignItems={'center'}>
+
+               <TextBlockContainer maxWidth={'500px'}>
+                  <Title>
+                     Elias is a <span>front-end developer</span>
+                  </Title>
+                  <Paragraph lineHeight={1.56}>
+                     He crafts responsive websites where technologies meet creativity
+                  </Paragraph>
+                  <Button>Contact me!!</Button>
+               </TextBlockContainer>
+
+               <ImageBoxStyled>
+                  <DecorStyled aria-hidden={true}>
+                     <SvgIcon iconId={'logo_outlined'} width={155} height={155}/>
+                  </DecorStyled>
+
+                  {/*<ImageBgStyled photo={photo}/>*/}
+
+                  <img src={photo} alt="Avatar"/>
+                  <LinkStyled>
+                     <DecorStyled/>
+                     Currently working on
+                     <a href="#works"> Portfolio</a>
+                  </LinkStyled>
+               </ImageBoxStyled>
+
+            </FirstSectionStyled>
+
+
+         </AppContainer>
+      </section>
+
    )
 }
 
 export default FirstSection
+
+
+interface IImageBgStyled {
+   photo: string
+}
+
+const ImageBgStyled = styled.div<IImageBgStyled>`
+  background-image: url(${props => props.photo});
+`

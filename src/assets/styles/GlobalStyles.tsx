@@ -31,8 +31,8 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'Fira Code', monospace;
-    background-color: ${({theme}) => theme.color.background};
-    color: ${({theme}) => theme.color.primary};
+    background-color: ${props => props.theme.color.background};
+    color: ${props => props.theme.color.primary};
     font-size: 16px;
   }
 `

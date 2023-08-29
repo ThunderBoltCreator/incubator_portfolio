@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-interface ITextBlockStyled {
+interface ITextBlockContainer {
    maxWidth: string | number
 }
 
-export const TextBlockStyled = styled.div<ITextBlockStyled>`
+export const TextBlockContainer = styled.div<ITextBlockContainer>`
   max-width: ${props => props.maxWidth};
 `

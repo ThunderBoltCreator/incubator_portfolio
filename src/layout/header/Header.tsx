@@ -1,6 +1,7 @@
 import {FC} from 'react'
 import {HeaderActions} from '../../components/headerActions/HeaderActions'
 import Logo from '../../components/logo/Logo'
+import {AppContainer} from '../../styledComponents/AppContainer.styled'
 import {HeaderStyled} from './Header.styled'
 
 interface IHeader {
@@ -8,10 +9,15 @@ interface IHeader {
 
 export const Header: FC<IHeader> = (props) => {
    return (
-      <HeaderStyled alignItems="center" justifyContent="space-between" as="header">
-         <Logo/>
-         <HeaderActions/>
-      </HeaderStyled>
+      <header>
+         <AppContainer>
+            <HeaderStyled alignItems="center" justifyContent="space-between">
+               <Logo/>
+               <HeaderActions/>
+            </HeaderStyled>
+         </AppContainer>
+      </header>
+
    )
 }
 
