@@ -17,10 +17,12 @@ const Menu: FC<IMenu> = (props) => {
    )
 
    return (
-      <MenuStyled alignItems={'center'} justifyContent={'flex-end'} gap={'10px 32px'} as={'ul'}>
+      <MenuStyled wrap={"wrap"} alignItems={'center'} justifyContent={'flex-end'} gap={'10px 32px'} as={'ul'}>
+
          {
             renderItems()
          }
+
       </MenuStyled>
    )
 }
