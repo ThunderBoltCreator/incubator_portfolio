@@ -1,6 +1,5 @@
 import {FC} from 'react'
 import styled from 'styled-components'
-import SectionTitle from '../../../components/sectionTitle/SectionTitle'
 import {FlexContainerStyled} from '../../../styledComponents/FlexContainer.styled'
 import WorkItem from '../../../components/workItem/WorkItem'
 
@@ -10,6 +9,7 @@ import proj3 from '../../../assets/images/proj-3.webp'
 import proj4 from '../../../assets/images/proj-4.webp'
 import proj5 from '../../../assets/images/proj-5.webp'
 import proj6 from '../../../assets/images/proj-6.webp'
+import {Title} from "../../../styledComponents/Title.styled";
 
 interface IWorks {
 }
@@ -49,8 +49,9 @@ const Works: FC<IWorks> = (props) => {
    )
    return (
       <section>
-         <SectionTitle padding={'0 0 0 65px'} textAlign={'center'} margin={'0 0 30px 0'} tag={'h2'}>Last
-            work</SectionTitle>
+         <Title>
+            Last work
+         </Title>
          <StyledWork wrap={'wrap'} gap={'50px'} justifyContent={'center'} as={'section'}>
             {renderProjects()}
          </StyledWork>

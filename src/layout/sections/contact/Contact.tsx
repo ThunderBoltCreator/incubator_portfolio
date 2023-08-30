@@ -1,6 +1,6 @@
 import React, {FC} from 'react'
 import styled from 'styled-components'
-import SectionTitle from '../../../components/sectionTitle/SectionTitle'
+import {Title} from "../../../styledComponents/Title.styled";
 
 interface IContactProps {
 
@@ -9,7 +9,7 @@ interface IContactProps {
 export const Contact: FC<IContactProps> = (props) => {
    return (
       <ContactStyled>
-         <SectionTitle textAlign={'center'} tag={'h2'}>Contact me</SectionTitle>
+         <Title>Contact me</Title>
       </ContactStyled>
    )
 }

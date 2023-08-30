@@ -10,16 +10,10 @@ interface ITitleStyled {
 
 export const Title = styled.h1<ITitleStyled>`
   color: ${props => props.theme.color.secondary};
-  font-size: ${props => props.fontSize || '48px'};
+  font-size: ${props => props.fontSize};
   text-align: ${props => props.textAlign};
   margin: ${props => props.margin};
   padding: ${props => props.padding};
-
-
-  margin-bottom: 32px;
-  font-size: 32px;
-  font-weight: 600;
-  max-width: 500px;
 
   span {
     color: ${props => props.theme.color.decoration};

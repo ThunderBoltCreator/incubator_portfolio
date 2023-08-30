@@ -1,7 +1,8 @@
 import {FC} from 'react'
 import SvgIcon from '../../../components/svgIcon/SvgIcon'
-import SectionTitle from '../../../components/sectionTitle/SectionTitle'
+
 import {SkillsStyled} from './Skills.styled'
+import {Title} from "../../../styledComponents/Title.styled";
 
 interface ISkills {
 }
@@ -9,12 +10,9 @@ interface ISkills {
 const Skills: FC<ISkills> = (props) => {
    return (
       <SkillsStyled>
-         <SectionTitle
-            textAlign={'center'}
-            tag={'h2'}
-         >
+         <Title>
             Skills
-         </SectionTitle>
+         </Title>
          <div>
             {/*<SvgIcon width={50} height={50} iconId="typescript"/>*/}
             {/*<SvgIcon width={50} height={50} iconId="react"/>*/}

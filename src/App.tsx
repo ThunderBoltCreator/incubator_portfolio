@@ -10,9 +10,9 @@ function App() {
          <Header/>
          <main>
             <FirstSection/>
-            <Skills/>
-            <Works/>
-            <Contact/>
+            {/*<Skills/>*/}
+            {/*<Works/>*/}
+            {/*<Contact/>*/}
          </main>
       </>
    )
