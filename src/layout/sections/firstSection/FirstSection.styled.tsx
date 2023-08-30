@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import {FlexContainerStyled} from '../../../styledComponents/FlexContainer.styled'
 import {Paragraph} from '../../../styledComponents/Paragraph.styled'
-import {Title} from "../../../styledComponents/Title.styled";
+import {Title} from '../../../styledComponents/Title.styled'
 
 
 const TextBlock = styled.div``
@@ -32,19 +32,19 @@ const Link = styled.span`
 const FirstSectionStyled = styled(FlexContainerStyled)`
   ${TextBlock} {
     width: 50%;
-    
+
     ${Title} {
       font-size: 32px;
       font-weight: 600;
       margin-bottom: 32px;
     }
+
     ${Paragraph} {
       margin-bottom: 24px;
     }
   }
 
-
-
+ 
   ${ImageBox} {
     width: 50%;
 
@@ -65,7 +65,6 @@ const FirstSectionStyled = styled(FlexContainerStyled)`
   }
 }
 `
-
 
 
 export {TextBlock, ImageBox, FirstSectionStyled, DecorStyled, Link}
