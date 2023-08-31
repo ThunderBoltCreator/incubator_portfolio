@@ -19,7 +19,7 @@ interface IButtonStyled {
    pink?: boolean
 }
 
-const ButtonStyled = styled.button<IButtonStyled>`
+export const ButtonStyled = styled.button<IButtonStyled>`
   padding: 8px 16px;
   font-weight: 500;
   transition: background-color .3s ease-in-out;

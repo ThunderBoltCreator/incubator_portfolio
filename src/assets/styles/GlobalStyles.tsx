@@ -14,7 +14,10 @@ export const GlobalStyles = createGlobalStyle`
     list-style: none;
   }
 
-  a {
+  a,
+  button{
+    cursor: pointer;
+    font-family: inherit;
     color: inherit;
     font-size: inherit;
     text-decoration: none;
@@ -23,10 +26,10 @@ export const GlobalStyles = createGlobalStyle`
   svg {
     font-size: inherit;
   }
-
-  a,
+  
   button {
-    cursor: pointer;
+    background-color: transparent;
+    border: none;
   }
 
   body {

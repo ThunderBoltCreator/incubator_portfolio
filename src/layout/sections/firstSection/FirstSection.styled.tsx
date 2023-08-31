@@ -1,13 +1,12 @@
 import styled from 'styled-components'
+import { DecorStyled, TextBlock, ImageBox } from '../../../styledComponents/Common.styled'
 import {FlexContainerStyled} from '../../../styledComponents/FlexContainer.styled'
 import {Paragraph} from '../../../styledComponents/Paragraph.styled'
-import {Title} from '../../../styledComponents/Title.styled'
+import {StyledTitle} from '../../../styledComponents/Title.styled'
 
 
-const TextBlock = styled.div``
-const ImageBox = styled.div``
-const DecorStyled = styled.div``
-const Link = styled.span`
+
+const FirstLink = styled.span`
   display: inline-flex;
   gap: 10px;
   align-items: center;
@@ -33,7 +32,7 @@ const FirstSectionStyled = styled(FlexContainerStyled)`
   ${TextBlock} {
     width: 50%;
 
-    ${Title} {
+    ${StyledTitle} {
       font-size: 32px;
       font-weight: 600;
       margin-bottom: 32px;
@@ -46,13 +45,21 @@ const FirstSectionStyled = styled(FlexContainerStyled)`
 
  
   ${ImageBox} {
-    width: 50%;
-
+    position: relative;
+    flex: 0 1 450px;
+    //display: flex;
+    //flex-direction: column;
+    
     > ${DecorStyled} {
-      width: 16px;
-      height: 16px;
-      border: 1px solid ${props => props.theme.color.decoration};
-      background-color: ${props => props.theme.color.decoration};
+      position: absolute;
+      top: 80px;
+      left: -20px;
+      z-index: -1;
+      
+      svg {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     img {
@@ -67,4 +74,4 @@ const FirstSectionStyled = styled(FlexContainerStyled)`
 `
 
 
-export {TextBlock, ImageBox, FirstSectionStyled, DecorStyled, Link}
+export {FirstSectionStyled, DecorStyled, FirstLink}

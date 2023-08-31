@@ -6,7 +6,7 @@ interface IMenu {
 }
 
 const Menu: FC<IMenu> = (props) => {
-   const menuItems = ['#home', '#works', '#firstSection-me', '#contacts']
+   const menuItems = ['#home', '#projects', '#firstSection-me', '#contacts']
 
    const renderItems = () => (
       menuItems.map((item) => (
