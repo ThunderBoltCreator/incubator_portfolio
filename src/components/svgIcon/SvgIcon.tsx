@@ -1,8 +1,8 @@
 import {FC} from 'react'
-import sprite from '../../assets/images/sprite.svg'
+import sprite from '../../assets/images/icons/sprite.svg'
 
 interface ISvgIcon {
-   iconId: 'typescript' | 'redux' | 'github' | 'react' | 'tailwind' | 'logo' | 'arrow' | 'logo_outlined'
+   iconId: 'typescript' | 'redux' | 'github' | 'react' | 'tailwind' | 'logo' | 'arrow' | 'logo_outlined' | 'figma' | 'discord'
    width?: string | number
    height?: string | number
 }
@@ -13,9 +13,11 @@ const svgViewBox = {
    logo: '0 0 16 17',
    typescript: '0 0 120 120',
    redux: '0 0 120 120',
-   github: '0 0 88 88',
+   github: '0 0 32 32',
    react: '0 0 120 120',
-   tailwind: '0 0 131 131'
+   tailwind: '0 0 131 131',
+   figma: '0 0 32 32',
+   discord: '0 0 32 32'
 }
 
 const SvgIcon: FC<ISvgIcon> = (props) => {

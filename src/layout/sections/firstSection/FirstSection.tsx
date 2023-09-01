@@ -4,12 +4,12 @@ import SvgIcon from '../../../components/svgIcon/SvgIcon'
 import {AppContainer} from '../../../styledComponents/AppContainer.styled'
 import {Paragraph} from '../../../styledComponents/Paragraph.styled'
 
-import {FirstSectionStyled, DecorStyled, FirstLink } from './FirstSection.styled'
+import {FirstSectionStyled, DecorStyled, FirstLink} from './FirstSection.styled'
 
 
 import photoDesktop from '../../../assets/images/desktop_photo.webp'
-import {ImageBox, TextBlock} from "../../../styledComponents/Common.styled";
-import {Title} from "../../../components/title/Title";
+import {ImageBox, TextBlock} from '../../../styledComponents/Common.styled'
+import {Title} from '../../../components/title/Title'
 
 interface IAbout {
 }
@@ -17,7 +17,7 @@ interface IAbout {
 const FirstSection: FC<IAbout> = (props) => {
 
    return (
-      <AppContainer marginBot={110} as='section'>
+      <AppContainer marginTop={60} marginBot={110} as="section">
          <FirstSectionStyled
             gap={'30px'}
             justifyContent={'space-between'}

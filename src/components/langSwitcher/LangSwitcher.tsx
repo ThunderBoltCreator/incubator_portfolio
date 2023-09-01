@@ -8,11 +8,9 @@ interface ILangSwitcher {
 
 export const LangSwitcher: FC<ILangSwitcher> = (props) => {
    return (
-      <LangSwitcherStyled alignItems={'center'}>
+      <LangSwitcherStyled as="button" alignItems={'center'}>
          <span>EN</span>
-         <button>
-            <SvgIcon width={10} height={5} iconId={'arrow'}/>
-         </button>
+         <SvgIcon width={10} height={5} iconId={'arrow'}/>
       </LangSwitcherStyled>
    )
 }
@@ -21,10 +19,5 @@ const LangSwitcherStyled = styled(FlexContainerStyled)`
   span {
     font-size: 16px;
     margin-right: 3px;
-  }
-
-  button {
-    background-color: unset;
-    border: none;
   }
 `
