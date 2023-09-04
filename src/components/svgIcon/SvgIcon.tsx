@@ -2,14 +2,14 @@ import {FC} from 'react'
 import sprite from '../../assets/images/icons/sprite.svg'
 
 interface ISvgIcon {
-   iconId: 'typescript' | 'redux' | 'github' | 'react' | 'tailwind' | 'logo' | 'arrow' | 'logo_outlined' | 'figma' | 'discord'
+   iconId: 'typescript' | 'redux' | 'github' | 'react' | 'tailwind' | 'logo' | 'arrowUp' | 'logo_outlined' | 'figma' | 'discord' | 'arrowDown'
    width?: string | number
    height?: string | number
 }
 
 const svgViewBox = {
    logo_outlined: '0 0 156 156',
-   arrow: '0 0 10 7',
+   arrowDown: '0 0 10 7',
    logo: '0 0 16 17',
    typescript: '0 0 120 120',
    redux: '0 0 120 120',
@@ -17,7 +17,8 @@ const svgViewBox = {
    react: '0 0 120 120',
    tailwind: '0 0 131 131',
    figma: '0 0 32 32',
-   discord: '0 0 32 32'
+   discord: '0 0 32 32',
+   arrowUp: '0 0 10 7'
 }
 
 const SvgIcon: FC<ISvgIcon> = (props) => {

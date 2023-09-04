@@ -17,7 +17,7 @@ const Menu: FC<IMenu> = (props) => {
    )
 
    return (
-      <MenuStyled wrap={"wrap"} alignItems={'center'} justifyContent={'flex-end'} gap={'10px 32px'} as={'ul'}>
+      <MenuStyled wrap={'wrap'} alignItems={'center'} justifyContent={'flex-end'} gap={'10px 32px'} as={'ul'}>
 
          {
             renderItems()
@@ -31,4 +31,12 @@ export default Menu
 
 const MenuStyled = styled(FlexContainerStyled)`
   flex: 1;
+
+  a {
+    transition: color .3s ease;
+  }
+
+  a:hover {
+    color: #FFF;
+  }
 `
