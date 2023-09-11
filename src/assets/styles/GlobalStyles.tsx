@@ -15,7 +15,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   a,
-  button{
+  button {
     cursor: pointer;
     font-family: inherit;
     color: inherit;
@@ -26,7 +26,7 @@ export const GlobalStyles = createGlobalStyle`
   svg {
     font-size: inherit;
   }
-  
+
   button {
     background-color: transparent;
     border: none;
@@ -38,4 +38,10 @@ export const GlobalStyles = createGlobalStyle`
     color: ${props => props.theme.color.primary};
     font-size: 16px;
   }
+
+  //body:has(div[data-radix-popper-content-wrapper]) {
+  //  @media only screen and (min-width: 768px) and (min-height: 100vh) {
+  //    overflow-y: scroll !important;
+  //  }
+  //}
 `

@@ -5,8 +5,9 @@ import {FlexContainerStyled} from '../../styledComponents/FlexContainer.styled'
 interface IMenu {
 }
 
+export const menuItems = ['#home', '#projects', '#about-me', '#contacts']
+
 const Menu: FC<IMenu> = (props) => {
-   const menuItems = ['#home', '#projects', '#firstSection-me', '#contacts']
 
    const renderItems = () => (
       menuItems.map((item) => (

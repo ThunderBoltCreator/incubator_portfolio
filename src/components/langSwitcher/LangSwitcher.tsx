@@ -4,10 +4,11 @@ import {keyframes} from 'styled-components'
 import styled from 'styled-components'
 import {fadeOut} from '../../assets/styles/animation'
 import {fadeIn} from '../../assets/styles/animation'
+import {Header} from '../../layout/header/Header'
 import {FlexContainerStyled} from '../../styledComponents/FlexContainer.styled'
 import SvgIcon from '../svgIcon/SvgIcon'
 
-import * as Select from '@radix-ui/react-select'
+import * as S from '@radix-ui/react-select'
 
 interface ILangSwitcher {
 }
@@ -18,34 +19,43 @@ export const LangSwitcher: FC<ILangSwitcher> = (props) => {
    const [language, setLanguage] = useState<LanguageType>('EN')
    const [isOpen, setIsOpen] = useState(false)
 
-   console.log('isOpen', isOpen)
-   console.log('language', language)
+   // console.log('isOpen', isOpen)
+   // console.log('language', language)
 
    return (
       <LangSwitcherStyled alignItems={'center'}>
-         <Select.Root
+         <S.Root
             onOpenChange={(open) => setIsOpen(open)}
             onValueChange={(value) => setLanguage(value as LanguageType)}
             value={language}
-            open={true}
+            // open={true}
+            open={isOpen}
          >
-            <Select.Trigger>
-               <Select.Value placeholder={language}>
+            <S.Trigger className={'select_button'}>
+               <S.Value className={'select_placeholder'} placeholder={language}>
                   <span>{language}</span>
-               </Select.Value>
-               <Select.Icon className={'switch_icon'}>
+               </S.Value>
+               <S.Icon className={'switch_icon'}>
                   <SvgIcon width={10} height={5} iconId={'arrowDown'}/>
-               </Select.Icon>
-            </Select.Trigger>
-            <Select.Content className={'select_content'}>
-               <Select.Item className={'select_item'} value={'RU'}>
-                  RU
-               </Select.Item>
-               <Select.Item className={'select_item'} value={'EN'}>
-                  EN
-               </Select.Item>
-            </Select.Content>
-         </Select.Root>
+               </S.Icon>
+            </S.Trigger>
+
+
+            <S.Content
+               position={'popper'}
+               className={'select_content'}
+               sideOffset={5}
+            >
+               <S.Viewport>
+                  <S.Item className={'select_item'} value={'RU'}>
+                     RU
+                  </S.Item>
+                  <S.Item className={'select_item'} value={'EN'}>
+                     EN
+                  </S.Item>
+               </S.Viewport>
+            </S.Content>
+         </S.Root>
       </LangSwitcherStyled>
    )
 }
@@ -59,9 +69,10 @@ const LangSwitcherStyled = styled(FlexContainerStyled)`
     outline: none;
     cursor: pointer;
 
-    [data-state='open'] {
-      .switch_placeholder {
-        opacity: 0;
+
+    &[data-state='open'] {
+      > span:nth-child(1) {
+        opacity: 0.2;
       }
     }
 
@@ -86,13 +97,13 @@ const LangSwitcherStyled = styled(FlexContainerStyled)`
   }
 
   .select_content {
-    position: relative;
-    top: 40px;
+    //position: relative;
+    //top: 40px;
     cursor: pointer;
-
 
     .select_item {
       outline: none;
+      line-height: 1;
 
       &:hover {
         color: #FFF;
